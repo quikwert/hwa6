@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GraphTask",
+            "request": "launch",
+            "mainClass": "GraphTask",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Käivita App",
+            "request": "launch",
+            "mainClass": "GraphTask",
+            "projectName": "hwa6"
+        }
+    ]
+}
+

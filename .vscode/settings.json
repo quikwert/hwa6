@@ -1,0 +1,18 @@
+{
+    "java.import.maven.enabled": false,
+    "java.import.gradle.enabled": false,
+    "java.import.projectConfiguration": "disabled",
+    "java.autobuild.enabled": false,
+    "java.project.sourcePaths": [
+        "src/main/java",
+        "src/test/java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/*.jar"
+    ],
+    "java.settings.url": ".vscode/settings.json",
+    "java.project.outputPath": "bin",
+    "[java]": {
+     "java.compiler.source": "1.8"
+    }
+}

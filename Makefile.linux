@@ -1,0 +1,28 @@
+JAVAC = javac
+JAVA = java
+BIN = bin
+LIB = lib
+SRC_MAIN = src/main/java
+SRC_TEST = src/test/java
+
+# Classpath seadistus (Linuxi koolonitega)
+CP = "$(BIN):$(LIB)/*:$(SRC_MAIN):$(SRC_TEST)"
+
+all: compile
+
+compile:
+	@echo "Kompileerin..."
+	$(JAVAC) -Xlint:-options --release 8 -d $(BIN) -cp $(CP) $(SRC_MAIN)/*.java $(SRC_TEST)/*.java
+
+test: compile
+	@echo "Käivitan testid..."
+	$(JAVA) -cp $(CP) org.junit.runner.JUnitCore GraphTaskTest
+
+clean:
+	@echo "Puhastan klassifailid..."
+	find $(BIN) -name "*.class" -type f -delete
+
+setup:
+	mkdir -p $(BIN)
+	touch $(BIN)/.gitkeep
+

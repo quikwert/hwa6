@@ -1,0 +1,6 @@
+Graph problems are individual for each student and junit-testing is therefore impossible. You must still submit your program text in Moodle, also you find here the pointer structure description (classes Graph, Vertex and Arc) to present graphs. To receive a task you have to visit the lab.
+Do not forget that you also have to write a report on your solution and upload it as a pdf-file in Moodle.
+
+Graafi ülesanne on igal inimesel individuaalne ning selle õigsust automaattest kontrollida ei saa. Küll aga kasutame me Moodle keskkonda programmi teksti esitamiseks ning viidastruktuuri kirjelduse andmiseks, samuti tagasiside andmiseks programmi kohta. Ülesande saate praktikumis.
+Ärge unustage, et aruande pdf-fail tuleb samuti esitada Moodle kaudu.
+

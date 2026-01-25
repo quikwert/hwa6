@@ -1,0 +1,20 @@
+# Kompileeritud väljund
+bin/**/*
+!bin/
+
+# IntelliJ IDEA
+.idea/*.local
+.idea/workspace.xml
+.idea/shelf/
+.idea/assetWizardSettings.xml
+*.iws
+out/
+
+# VS Code
+.history/
+*.log
+
+# Operatsioonisüsteemi spetsiifilised failid
+.DS_Store
+Thumbs.db
+

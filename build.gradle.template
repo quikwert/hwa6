@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+}
+
+group = 'local.algorithms'
+version = '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    flatDir { dirs 'lib' }
+}
+
+def localLibs = fileTree(dir: 'lib', include: ['*.jar'])
+
+dependencies {
+    implementation localLibs
+    testImplementation localLibs
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['src/main/java'] }
+        java.outputDir = file('bin')
+        output.resourcesDir = file('bin')
+    }
+    test {
+        java { srcDirs = ['src/test/java'] }
+        java.outputDir = file('bin')
+        output.resourcesDir = file('bin')
+        compileClasspath += files('bin')
+        runtimeClasspath += files('bin')
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.addAll(['--release', '8'])
+}
+
+test {
+    useJUnit()
+    classpath = files('bin') + localLibs + classpath
+}
+
+layout.buildDirectory = file('build_gradle')
+
+clean {
+    delete 'bin'
+}
+
